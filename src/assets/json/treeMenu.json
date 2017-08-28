@@ -4,7 +4,7 @@
         {
             "label": "Article List",
             "id": "AllArticlesFolder",
-            "triggerIcon": "keyboard_arrow_down",
+            "triggerIcon": "arrow_drop_down",
             "collapsedIcon": "fa-folder",
             "expanded":"true",
             "leaf": false,
@@ -12,8 +12,8 @@
                 {
                     "label": "Extjs (Extended Java Script)",
                     "id": "ExtjsFolder",
-                    "expandedIcon": "fa-folder-open",
-                    "collapsedIcon": "fa-folder",
+                    "expandedIcon": "expand_more",
+                    "collapsedIcon": "chevron_right",
                     "expanded":"true",
                     "leaf": false,
                     "children": [
@@ -42,8 +42,8 @@
                 },{
                     "label": "Angular Framework",
                     "id": "AngularFolder",
-                    "expandedIcon": "fa-folder-open",
-                    "collapsedIcon": "fa-folder",
+                    "expandedIcon": "expand_more",
+                    "collapsedIcon": "chevron_right",
                     "expanded":"true",
                     "leaf": false,
                     "children": [
@@ -128,8 +128,8 @@
                 },{
                     "label": "Java Framework",
                     "id": "JavaFolder",
-                    "expandedIcon": "fa-folder-open",
-                    "collapsedIcon": "fa-folder",
+                    "expandedIcon": "expand_more",
+                    "collapsedIcon": "chevron_right",
                     "expanded":"true",
                     "leaf": false,
                     "children": [

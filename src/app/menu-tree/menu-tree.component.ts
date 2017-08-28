@@ -25,4 +25,35 @@ export class MenuTreeComponent implements OnInit {
     // item.nextElementSibling.style.position='absolute';
     // item.nextElementSibling.style.zIndex=10;
   }
+
+  onMenuItemClick($event,menuItem){
+    var childTemplate = document.getElementById(menuItem.id);
+    if($event.target.previousElementSibling.innerHTML == menuItem.collapsedIcon){
+      childTemplate.style.display='block';
+      if($event.target.previousElementSibling.className == 'material-icons'){
+          $event.target.previousElementSibling.innerHTML = menuItem.expandedIcon;
+      }      
+    }else{
+      childTemplate.style.display='none';
+      if($event.target.previousElementSibling.className == 'material-icons'){
+        $event.target.previousElementSibling.innerHTML = menuItem.collapsedIcon;
+      }
+    }
+  }
+
+  onMenuIconClick($event,menuItem){
+    var childTemplate = document.getElementById(menuItem.id);
+    if($event.target.innerHTML == menuItem.collapsedIcon){
+      childTemplate.style.display='block';
+      if($event.target.className == 'material-icons'){
+          $event.target.innerHTML = menuItem.expandedIcon;
+      }      
+    }else{
+      childTemplate.style.display='none';
+      if($event.target.className == 'material-icons'){
+        $event.target.innerHTML = menuItem.collapsedIcon;
+      }
+    }
+  }
+
 }
