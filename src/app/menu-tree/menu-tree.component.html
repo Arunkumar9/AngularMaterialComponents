@@ -1,0 +1,66 @@
+<p>
+  menu-tree works!
+</p>
+<div *ngFor="let menuTreeItem of menuTree">
+    <a class="ui-menuitem-link ui-corner-all ui-submenu-link" #item1 (mouseenter)="onItemMouseEnter($event, item1, menuTreeItem)" (mouseleave)="onItemMouseLeave($event, item1, menuTreeItem)">
+      <span class="ui-menuitem-text">{{menuTreeItem.label}}</span>                         
+      <span class="material-icons">{{menuTreeItem.triggerIcon}}</span>
+    </a>
+    
+    <table id={{menuTreeItem.id}} style="display:none" class="menuItemContainer" >
+      <tr *ngFor="let menuChildItem of menuTreeItem.children" >
+        <td>{{menuChildItem.label}}</td>
+      </tr>
+    </table>
+</div>
+
+<!--<span class="ui-menuitem-icon fa fa-fw" [ngClass]=\"category.icon\"></span>    -->
+
+<!-- <div *ngFor="let menuItem of menuTree">
+
+  <md-menu #AllArticlesFolder>
+    <button md-menu-item> Setting </button>
+    <button md-menu-item> Help </button>
+  </md-menu>
+  <button md-icon-button [mdMenuTriggerFor]="AllArticlesFolder">
+      <md-icon>more_vert</md-icon>
+  </button> 
+
+
+    <md-menu #appMenu>
+    <button md-menu-item> Settings </button>
+    <button md-menu-item> Help </button>
+  </md-menu>
+  <button md-icon-button [mdMenuTriggerFor]="appMenu">
+      <md-icon>more_vert</md-icon>
+  </button>  
+
+
+   <md-menu-bar>
+    <md-menu>
+      <button>
+        Arun
+      </button>
+       <md-menu-content>
+        <md-menu-item>
+          <md-button>
+            Share...
+          </md-button>
+        </md-menu-item>
+        <md-menu-divider></md-menu-divider>
+        <md-menu-item>
+          <md-menu>
+            <md-button>New</md-button>
+            <md-menu-content>
+              <md-menu-item><md-button>Document</md-button></md-menu-item>
+              <md-menu-item><md-button>Spreadsheet</md-button></md-menu-item>
+              <md-menu-item><md-button>Presentation</md-button></md-menu-item>
+              <md-menu-item><md-button>Form</md-button></md-menu-item>
+              <md-menu-item><md-button>Drawing</md-button></md-menu-item>
+            </md-menu-content>
+          </md-menu>
+        </md-menu-item>
+      </md-menu-content> 
+    </md-menu>
+  </md-menu-bar> 
+</div> -->
